@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#1a1a2e">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎙️ ADB Mic Recorder"
+        android:textSize="28sp"
+        android:textColor="#e94560"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="○ 未录音"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:text="● 开始录音"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#e94560"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:text="■ 停止录音"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#533483"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\nADB 命令：\n开始: adb shell am broadcast -a com.adbmic.START\n停止: adb shell am broadcast -a com.adbmic.STOP\n状态: adb shell am broadcast -a com.adbmic.STATUS\n拉取: adb pull /sdcard/Download/ ./"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:fontFamily="monospace"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>
